@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#9733; Garabiles &#9733;</title>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body {
+            background-image: url(image.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            width: 100%;
+            padding: 15px 10%;
+            background: transparent;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-radius: 15px;
+            box-shadow: 0 0 15px white;
+            background-color: #00ffff34;
+            text-shadow: 0 0 15px hsl(0, 0%, 0%);
+        }
+        h1 {
+            font-size: 25px;
+            color: white;
+            font-weight: 600;
+        }
+        .navig a {
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+        .navig a:hover {
+            color: hsl(177, 98%, 53%);
+        }
+
+        
+        .container {
+            width: 80%;
+            display: grid;
+            grid-template-columns: 2fr 1fr; 
+            gap: 20px;
+            margin-top: 80px;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+       
+        .home-content {
+            max-width: 600px;
+            background: rgba(10, 82, 189, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px white;
+            text-align: center;
+        }
+        .home-content h2 {
+            font-size: 42px;
+            color: aqua;
+        }
+        .home-content h3 {
+            font-size: 28px;
+            color: #5994ec;
+            text-shadow: 0 0 15px rgb(6, 2, 41);
+        }
+        .home-content p {
+            font-size: 22px;
+            margin: 15px 0 20px;
+            text-align: justify;
+        }
+        .soc-box {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            position: relative; 
+            z-index: 10;
+        }
+        .soc-box a {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 45px;
+            border: 2px solid #2968b9;
+            border-radius: 8px;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: 600;
+            color: rgb(50, 207, 255);
+            overflow: hidden;
+            transition: color 0.3s;
+            z-index: 2; 
+        }
+        .soc-box a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: #2968b9;
+            z-index: -1; 
+            transition: width 0.5s;
+        }
+        .soc-box a:hover {
+            color: black;
+        }
+        .soc-box a:hover::before {
+            width: 100%;
+        }
+
+        aside {
+            background: rgba(10, 82, 189, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 15px white;
+            text-align: center;
+        }
+        details {
+            background: hsla(236, 92%, 67%, 0.527);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px white;
+            text-align: center;
+           
+
+        }
+        summary {
+            background: hsla(244, 63%, 43%, 0.467);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px white;
+            text-align: center;
+            font-family:'Times New Roman', Times, serif;
+        }
+        
+        .profile-section .img-box {
+            width: 180px;
+            height: 180px;
+            border: 2px solid white;
+            border-radius: 50%;
+            box-shadow: 0 0 15px white;
+            overflow: hidden;
+            margin: 10px auto;
+        }
+        .img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        iframe {
+            width: 100%;
+            height: 180px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px white;
+            margin-top: 10px;
+        }
+        figure {
+            margin-top: 10px;
+            position: relative;
+        }
+        figure a{
+            display: inline-block;
+        }
+       
+        figcaption {
+            font-size: 18px;
+            color: white;
+        }
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px white;
+            background-color: #00ffff34;
+            text-shadow: 0 0 15px hsl(0, 0%, 0%);
+            color: white;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>APPLE MAE D. GARABILES</h1>
+        <nav class="navig">
+            <a href="main.html">Main</a>
+            <a href="#info">Info</a>
+            <a href="#cont">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+       
+        <main>
+            <section >
+                <div class="home-content">
+                    <h2>Hi! I'm Apple.</h2>
+                    <h3>ABOUT ME:</h3>
+                    <p>
+                        BIRTH DAY: 07/07/03<br>
+                        AGE: 21<br>
+                        ADDRESS: MT. KALUNASAN, CEBU CITY<br>
+                        HEIGHT: 5'2<br>
+                        WEIGHT: 47kg<br>
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div id="info">
+                <div class="home-content">
+                    <h2>I'm a BSIT Student</h2>
+                    <h3>(Bachelor of Information Technology)</h3>
+                    <p>
+                        PRIMARY SCHOOL: KALUNASAN ELEMENTARY SCHOOL<br>
+                        SECONDARY: OPRRA NATIONAL HIGH SCHOOL<br>
+                        SENIOR HIGH: CREST SENIOR HIGH SCHOOL<br>
+                        COLLEGE: CEBU EASTERN COLLEGE
+                    </p>
+                    <h3>WORK EXPERIENCE</h3>
+                    <p>
+                        SERVICE CREW: THIRSTY SHAKE AND JUICES<br>
+                        CALLCENTER: TELEPERFORMANCE & CONCENTRIX<br>
+                        CUSTOMER SERVICE: EXECUTIVE OPTICAL
+                    </p>
+                    <br>
+                    <br>
+                    <details>
+                        <summary>LIST OF MY FAVORITE EMOJIS:</summary>
+                        <br>
+                        <ul>
+                          <li>LOVE CAT:&#x1F63B;</li>
+                          <li>ANGRY CAT:&#X1F63C;</li>
+                          <li>LAUGHING CAT:&#X1F639;</li>
+                            
+                        </ul>
+                    </details>
+                
+                    <div id="cont" class="soc-box"> 
+                        <a href="https://www.facebook.com/applepie070703/" target="_blank">Facebook</a>
+                        <a href="contact.html" target="_blank">Contact</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        
+        <aside>
+            <div class="profile-section">
+                <div class="img-box">
+                    <img src="garabiles.jpg" alt="my picture">
+                </div>
+            </div>
+            <hr><br>
+            <div class="school-section">
+                <h4 id="about">&#9733; I like watching tutorial videos.</h4>
+                <br>
+                <iframe src="https://www.youtube.com/embed/1cTIQt_WUbg?si=ciKS7doSFDnYRAaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <br><br><hr><br>
+                <h4> &#9733; School Location.</h4>
+                <br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.591781199322!2d123.89344197352368!3d10.294438167902207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99bfcc60d650d%3A0x5ee73506c68dd233!2sCebu%20Eastern%20College%20Cebu%20city!5e0!3m2!1sen!2sph!4v1742055273784!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <br><br>
+                <hr><br>
+                <h4>&#9733; School Map.</h4>
+            <figure>
+                <a href="school.jpg" target="_blank">
+                <img src="school.jpg" alt="School Map" usemap="#schoolmap" width="300" height="200">
+                </a>
+                
+                    <a href="https://www.google.com/maps/@10.3289079,123.8746146,14z?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" alt="Google Maps" title="click here">Google Map link</a><br>
+
+                    <a href="https://www.facebook.com/ceccollegeregistrar/" target="_blank" alt="School Website" title="click here">WEBSITE OF THE SCHOOL</a>
+                
+                <figcaption>School Map picture with the link through google map and our school website in facebook.</figcaption>
+            </figure>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        &copy; 2025. ALL RIGHTS RESERVED.
+    </footer>
+</body>
+</html>

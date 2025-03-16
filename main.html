@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#10039; Personal Portfolio &#10039;</title>
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <style>
+       
+        body {
+            background-image: url(img.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+        header{
+            font-size: 60px;
+            font-weight: bold;
+            color: hsl(221, 100%, 81%);
+            text-shadow:0 0 15px rgb(8, 1, 105); ;
+            font-family:'Times New Roman', Times, serif;
+           
+            
+        }
+        h1 {
+            padding: 20px;
+            font-size: 1.8em;
+            font-weight: bold;
+            background-color: rgba(120, 132, 238, 0.13);
+            border:2px rgba(120, 132, 238, 0.13);
+            width: 350px;
+            height: 36px;
+            border-radius: 50px;
+            color: #01182b;
+            font-family:'Times New Roman', Times, serif;
+            box-shadow: 0 0 15px white;
+
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 60px auto;
+            max-width: 900px;
+            padding: 10px;
+            gap: 30px;
+        }
+        .profile {
+            background: hwb(0 100% 0% / 0.151);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 55%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .profile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+            border: 3px solid hsl(0, 0%, 100%);
+        }
+        .profile img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-img:active {
+            transform: scale(2); 
+        }
+        .btn-box {
+            display: flex;
+            width: 400px;
+            height: 50px;
+            justify-content: center;
+
+        }
+        .btn-box a{
+            border: 2px solid hsl(219, 86%, 38%);
+            background: rgba(114, 160, 245, 0.452);
+            font-size: 19px;
+            border-radius: 8px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            color:black;
+            letter-spacing: 1px;
+            width: 280px;
+            height: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 0 15px white;
+           
+        }
+        .btn-box a:hover{
+            background-color: hwb(263 7% 29% / 0.473);
+            color: rgb(255, 255, 255);
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        Personal Portfolio
+    </header>
+    
+    <section class="container">
+        <div class="profile">
+            <img src="oacan.jpg" alt="Oacan" class="profile-img" title="press and hold">
+        
+            <h1>Jomar I. Oacan &#x2764;</h1>
+            <div class="btn-box">
+            <a href="oacan.html" target="_self" title="click me">&#9734;ABOUT OACAN:</a>
+            </div>
+        </div>
+        <div class="profile">
+            <img src="garabiles.jpg" alt="Garabiles" class="profile-img" title="press and hold">
+
+            <h1>Apple Mae D. Garabiles  &#x2764;</h1>
+            <div class="btn-box">
+            <a href="garabiles.html" target="_self" title="click me">&#9734;ABOUT GARABILES:</a>
+        </div>
+        </div>
+    </section>
+    <footer>
+        &copy; 2025, All rights reserved by Garabiles and Oacan
+    </footer>
+    
+    
+    
+</body>
+</html>
