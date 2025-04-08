@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>&#9733; OACAN &#9733;</title>
-    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <link rel="icon" href="logo.jpg" type="image/x-icon">
+
     <style>
         * {
             margin: 0;
@@ -21,6 +22,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            letter-spacing: 0.5px;
         }
         header {
             width: 100%;
@@ -35,7 +37,7 @@
             z-index: 1000;
             border-radius: 15px;
             box-shadow: 0 0 15px white;
-            background-color: #00ffff34;
+            background-color: hsla(24, 82%, 32%, 0.61);
             text-shadow: 0 0 15px hsl(0, 0%, 0%);
         }
         h1 {
@@ -51,28 +53,24 @@
             transition: 0.3s;
         }
         .navig a:hover {
-            color: hsl(177, 98%, 53%);
+            color: hwb(98 7% 1%);
         }
-
-        
         .container {
-            width: 80%;
+            width: 90%;
+            max-width: 1200px;
             display: grid;
-            grid-template-columns: 2fr 1fr; 
+            grid-template-columns: 2fr 1fr;
             gap: 20px;
             margin-top: 80px;
         }
-
         main {
             display: flex;
             flex-direction: column;
             gap: 20px;
         }
-
-       
         .home-content {
             max-width: 600px;
-            background: rgba(10, 82, 189, 0.3);
+            background: hwb(27 3% 39% / 0.712);
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 15px white;
@@ -80,11 +78,11 @@
         }
         .home-content h2 {
             font-size: 42px;
-            color: aqua;
+            color: hsl(30, 82%, 4%);
         }
         .home-content h3 {
             font-size: 28px;
-            color: #5994ec;
+            color: hsl(29, 75%, 57%);
             text-shadow: 0 0 15px rgb(6, 2, 41);
         }
         .home-content p {
@@ -97,7 +95,7 @@
             justify-content: center;
             gap: 20px;
             margin-top: 20px;
-            position: relative; 
+            position: relative;
             z-index: 10;
         }
         .soc-box a {
@@ -107,15 +105,17 @@
             justify-content: center;
             width: 140px;
             height: 45px;
-            border: 2px solid #2968b9;
+            border: 2px solid hwb(0 4% 9%);
             border-radius: 8px;
             font-size: 18px;
             text-decoration: none;
             font-weight: 600;
-            color: rgb(50, 207, 255);
+            color: #d4e9f0;
+            background-color: hsla(0, 89%, 41%, 0.63);
+            text-shadow: 0 0 15px hsl(0, 0%, 0%);
             overflow: hidden;
             transition: color 0.3s;
-            z-index: 2; 
+            z-index: 2;
         }
         .soc-box a::before {
             content: "";
@@ -124,8 +124,8 @@
             left: 0;
             width: 0%;
             height: 100%;
-            background: #2968b9;
-            z-index: -1; 
+            background: hsl(27, 86%, 35%);
+            z-index: -1;
             transition: width 0.5s;
         }
         .soc-box a:hover {
@@ -134,32 +134,42 @@
         .soc-box a:hover::before {
             width: 100%;
         }
-
         aside {
-            background: rgba(10, 82, 189, 0.2);
+            background: hsla(9, 69%, 57%, 0.58);
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 0 15px white;
             text-align: center;
+            
+        }
+        h4{
+            font-size: 30px;
+            color: hsl(30, 82%, 4%);
+        }
+        h5{
+            font-size: 40px;
+            color: hwb(0 100% 0%);
+        }
+        h4, h5{
+            font-family:Arial, Helvetica, sans-serif;
+            text-shadow: 0 0 15px hsl(0, 0%, 0%);
         }
         details {
-            background: hsla(236, 92%, 67%, 0.527);
+            background: lch(53.03% 79.64 42.92 / 0.527);
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 15px white;
             text-align: center;
             font-family: fantasy;
-
         }
         summary {
-            background: hsla(244, 63%, 43%, 0.467);
+            background: hwb(0 4% 41% / 0.467);
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 0 15px white;
             text-align: center;
             font-family: fantasy;
         }
-        
         .profile-section .img-box {
             width: 180px;
             height: 180px;
@@ -178,48 +188,85 @@
             box-shadow: 0 0 15px white;
             margin-top: 10px;
         }
-        figure {
-            margin-top: 10px;
-            position: relative;
+        @media (max-width: 1024px){
+            header {
+                padding: 15px 5%;
+            }
+            .container {
+                grid-template-columns: 1fr;
+                width: 90%;
+            }
+            .home-content {
+                max-width: 100%;
+                padding: 15px;
+            }
+            .soc-box {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .soc-box a {
+                width: 100%;
+            }
         }
-        figure a{
-            display: inline-block;
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 5%;
+            }
+            .home-content h2 {
+                font-size: 36px;
+            }
+            .home-content h3 {
+                font-size: 24px;
+            }
+            .home-content p {
+                font-size: 18px;
+            }
+            .soc-box a {
+                font-size: 16px;
+                width: 100%;
+            }
+            iframe {
+                width: 100%;
+                height: auto;
+            }
         }
-       
-        figcaption {
-            font-size: 18px;
-            color: #121872;
-            background: #ffffff3b;
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 5%;
+            }
+            .home-content h2 {
+                font-size: 30px;
+            }
+            .home-content h3 {
+                font-size: 22px;
+            }
+            .home-content p {
+                font-size: 16px;
+            }
+            .soc-box {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .soc-box a {
+                width: 100%;
+                font-size: 14px;
+            }
+            h4, h5 {
+                font-size: 24px;
+            }
         }
-        footer {
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px white;
-            background-color: #00ffff34;
-            text-shadow: 0 0 15px hsl(0, 0%, 0%);
-            color: white;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
-        
     </style>
 </head>
 <body>
     <header>
         <h1>JOMAR I. OACAN</h1>
         <nav class="navig">
-            <a href="index.html">Main</a>
-            <a href="#info">Info</a>
-            <a href="#cont">Contact</a>
+            <a href="about.html">BACK</a>
+            <a href="index.html">HOME</a>
         </nav>
     </header>
 
     <div class="container">
-       
         <main>
             <section >
                 <div class="home-content">
@@ -231,47 +278,51 @@
                         ADDRESS: OPRRA, KALUNASAN, CEBU CITY<br>
                         HEIGHT: 5'4<br>
                         WEIGHT: 60kg<br>
-                        PRIMARY SCHOOL: OPRRA ELEMENTARY SCHOOL<br>
-                        SECONDARY: OPRRA NATIONAL HIGH SCHOOL<br>
-                        SENIOR HIGH: OPPRA SENIOR HIGH SCHOOL<br>
                     </p>
                 </div>
             </section>
 
             <section>
-                <div id="info">
                 <div class="home-content">
                     <h2>I'm a BS Information Technology Student</h2>
                     <h3>(Bachelor of Information Technology)</h3>
+                    <p>
+                        <ul>
+                            <li>PRIMARY SCHOOL: OPRRA ELEMENTARY SCHOOL</li>
+                            <li> SECONDARY: OPRRA NATIONAL HIGH SCHOOL</li>
+                            <li>SENIOR HIGH: OPPRA SENIOR HIGH SCHOOL</li>
+                        </ul>
+                    </p>
                     <h3>MY SKILLS</h3>
                     <p>
-                        Computer Literacy<br>
-                        Customer Handling<br>
-                        Basic Troubleshooting Computer Software Operator<br>
-                        Communication Skill<br>
+                        <ul>
+                        <li>Computer Literacy</li>
+                        <li>Customer Handling</li>
+                        <li>Basic Troubleshooting Computer Software Operator</li>
+                        </ul>
                     </p>
                     <br>
                     <br>
                     <details>
-                        <summary>LIST OF MY FAVORITE EMOJIS:</summary>
+                        <summary>LIST OF MY FAVORITE FOODS:</summary>
                         <br>
                         <ul>
-                          <li>Smile Emoji:  &#128512;</li>
-                          <li>Laughing Emoji: &#128514;</li>
-                          <li>Annoying Emoji: &#128540;</li>
-                            
+                          <li>Tuslob Buwa&#128512;</li>
+                          <li>Burger&#128512;</li>
+                          <li>Shawarma&#128512;</li>
                         </ul>
                     </details>
-                
-                    <div id="cont" class="soc-box"> 
+                    <br>
+                    <hr>
+                    <p>&#x2764; If you wish to give us any suggestion where to go next. Feel free to contact us in Facebook or in our other contact information below.</p>
+                    <div class="soc-box"> 
                         <a href="https://www.facebook.com/jomar.oacan.3" target="_blank">Facebook</a>
-                        <a href="contact.html" target="_blank">Contact</a>
+                        <a href="contact.html" target="_self">Contact</a>
                     </div>
                 </div>
             </section>
         </main>
 
-        
         <aside>
             <div class="profile-section">
                 <div class="img-box">
@@ -288,22 +339,9 @@
                 <h4> &#9733; School Location.</h4>
                 <br>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.591781199346!2d123.89344197408128!3d10.29443816790105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99bfcc60d650d%3A0x5ee73506c68dd233!2sCebu%20Eastern%20College%20Cebu%20city!5e0!3m2!1sen!2sph!4v1742263548924!5m2!1sen!2sph" width="320" height="220" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <br><br>
-                <hr><br>
-                <figure>
-                   <img src="schl.jpg" usemap="#image_map">
-                    <map name="image_map">
-                      <area alt="school" title="school" href="https://web.facebook.com/CEC1915EASTERNIANS" coords="167,206,320,353" shape="rect">
-                      <area alt="tuition" title="tuition" href="https://web.facebook.com/photo.php?fbid=1078826710698339&set=pb.100057130613163.-2207520000&type=3" coords="184,8,306,134" shape="rect">
-                    </map>
-                <figcaption>&#9829;A picture of our school and our school tuition fee. (Click the Bell for tuition and click the door for school)</figcaption>
-            </figure>
+                <h5>&#9733; Location of CEBU EASTERN COLLEGE.</h5>
             </div>
         </aside>
     </div>
-
-    <footer>
-        &copy; 2025. ALL RIGHTS RESERVED.
-    </footer>
 </body>
 </html>
